@@ -40,7 +40,7 @@ public class MyLoginPresenter implements LoginPresenter {
         loginView.updateViewFromModel();
         loginView.open();
     }
-//////////////////////////////
+
     @Override
     public void login() {
         loginView.updateModelFromView();
