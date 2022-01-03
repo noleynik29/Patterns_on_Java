@@ -49,17 +49,34 @@ public class Main {
                         "1 - PalPay" + "\n" +
                         "2 - Credit Card");
                 String paymentMethod = reader.readLine();
+<<<<<<< HEAD
+=======
+
+                // Client creates different strategies based on input from user,
+                // application configuration, etc.
+>>>>>>> b9e562aa98307ddea185f6e3104b32aea9ebde04
                 if (paymentMethod.equals("1")) {
                     strategy = new PayByPayPal();
                 } else {
                     strategy = new PayByCreditCard();
                 }
             }
+<<<<<<< HEAD
+=======
+
+            // Order object delegates gathering payment data to strategy object,
+            // since only strategies know what data they need to process a
+            // payment.
+>>>>>>> b9e562aa98307ddea185f6e3104b32aea9ebde04
             order.processOrder(strategy);
 
             System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
             String proceed = reader.readLine();
             if (proceed.equalsIgnoreCase("P")) {
+<<<<<<< HEAD
+=======
+                // Finally, strategy handles the payment.
+>>>>>>> b9e562aa98307ddea185f6e3104b32aea9ebde04
                 if (strategy.pay(order.getTotalCost())) {
                     System.out.println("Payment has been successful.");
                 } else {
