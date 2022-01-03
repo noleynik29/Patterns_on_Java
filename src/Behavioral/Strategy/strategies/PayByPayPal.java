@@ -6,12 +6,6 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-<<<<<<< HEAD
-=======
-/**
- * Concrete strategy. Implements PayPal payment method.
- */
->>>>>>> b9e562aa98307ddea185f6e3104b32aea9ebde04
 public class PayByPayPal implements PayStrategy {
     private static final Map<String, String> DATA_BASE = new HashMap<>();
     private final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
@@ -24,12 +18,6 @@ public class PayByPayPal implements PayStrategy {
         DATA_BASE.put("qwerty", "john@amazon.eu");
     }
 
-<<<<<<< HEAD
-=======
-    /**
-     * Collect customer's data.
-     */
->>>>>>> b9e562aa98307ddea185f6e3104b32aea9ebde04
     @Override
     public void collectPaymentDetails() {
         try {
@@ -54,12 +42,6 @@ public class PayByPayPal implements PayStrategy {
         return signedIn;
     }
 
-<<<<<<< HEAD
-=======
-    /**
-     * Save customer data for future shopping attempts.
-     */
->>>>>>> b9e562aa98307ddea185f6e3104b32aea9ebde04
     @Override
     public boolean pay(int paymentAmount) {
         if (signedIn) {
